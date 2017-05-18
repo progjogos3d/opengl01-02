@@ -17,10 +17,10 @@ public class Triangle implements Scene {
     private Keyboard keys = Keyboard.getInstance();
 
 	/**
-	 * A variável VERTEX_SHADER contém o vertex shader usado no desenho.
+	 * A variável VERTEX_SHADER_CODE contém o vertex shader usado no desenho.
 	 * Este vertex shader somente repassa as coordenadas do vértice para a placa de vídeo, sem alterá-las.
 	 */
-	private static final String VERTEX_SHADER = 
+	private static final String VERTEX_SHADER_CODE =
 			"#version 330\n" +
 			"in vec2 aPosition;\n" + 
 			"void main(){\n" + 
@@ -28,10 +28,10 @@ public class Triangle implements Scene {
 			"}";
 
 	/**
-	 * A variável FRAGMENT_SHADER contém o fragment shader usado no exemplo.
+	 * A variável FRAGMENT_SHADER_CODE contém o fragment shader usado no exemplo.
 	 * Este fragment shader retorna a cor amarela.
 	 */
-	private static final String FRAGMENT_SHADER = 
+	private static final String FRAGMENT_SHADER_CODE =
 			"#version 330\n" + 
 			"out vec4 out_color;\n" + 
 			"void main(){\n" + 
@@ -161,10 +161,10 @@ public class Triangle implements Scene {
 		//Agora iremos chamar as funções definidas acima para efetivamente criar o shader program
 
 		//Compila o vertex shader
-		int vertex = compileShader(GL_VERTEX_SHADER, VERTEX_SHADER);
+		int vertex = compileShader(GL_VERTEX_SHADER, VERTEX_SHADER_CODE);
 
 		//Compila o fragment shader
-		int fragment = compileShader(GL_FRAGMENT_SHADER, FRAGMENT_SHADER);
+		int fragment = compileShader(GL_FRAGMENT_SHADER, FRAGMENT_SHADER_CODE);
 
 		//Une os dois num shader program
 		shader = linkProgram(vertex, fragment);
