@@ -18,7 +18,7 @@ public class Triangle implements Scene {
 
 	/**
 	 * A variável VERTEX_SHADER contém o vertex shader usado no desenho.
-	 * Este vertex shader somente repassa as coordenadas do vértice para a placa de vídeo, alterá-las.
+	 * Este vertex shader somente repassa as coordenadas do vértice para a placa de vídeo, sem alterá-las.
 	 */
 	private static final String VERTEX_SHADER = 
 			"#version 330\n" +
