@@ -41,9 +41,6 @@ public class Triangle implements Scene {
 	/** Esta variável guarda o identificador da malha (Vertex Array Object) do triângulo */
 	private int vao;
 
-	/** Guarda o id do buffer com todas as posições do vértice. */
-	private int positions;
-
 	/** Guarda o id do shader program, após compilado e linkado */
 	private int shader;
 
@@ -149,7 +146,7 @@ public class Triangle implements Scene {
 		};
 
 		//Solicitamos a criação de um buffer na OpenGL, onde esse array será guardado
-		positions = glGenBuffers();
+		var positions = glGenBuffers();
 		//Informamos a OpenGL que iremos trabalhar com esse buffer
 		glBindBuffer(GL_ARRAY_BUFFER, positions);
 
