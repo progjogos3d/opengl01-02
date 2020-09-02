@@ -175,13 +175,12 @@ public class Triangle implements Scene {
 		//Informamos a OpenGL que iremos trabalhar com essa variável
 		glEnableVertexAttribArray(aPosition);
 
-		//Como já finalizamos a carga, informamos a OpenGL que não estamos mais usando esse buffer.
-		glBindBuffer(GL_ARRAY_BUFFER, 0);
-
+		//Faxina
 		//Finalizamos o nosso VAO, portanto, informamos a OpenGL que não iremos mais trabalhar com ele
 		glBindVertexArray(0);
 
-
+		//Como já finalizamos a carga, informamos a OpenGL que não estamos mais usando esse buffer.
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
 	}
 
 	@Override
